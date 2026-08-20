@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 700px;
+    max-width: 90%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.exam-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeeeee;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#studentName {
+    padding: 7px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+#timer {
+    color: red;
+    font-weight: bold;
+}
+
+#questionNumber {
+    color: #444;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    padding: 12px;
+    text-align: left;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.option:hover {
+    background-color: #eeeeee;
+}
+
+.option.selected {
+    background-color: #cce5ff;
+    border-color: #007bff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons button,
+.submit-button,
+.result-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+.submit-button {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #28a745;
+}
+
+.result-box {
+    display: none;
+    text-align: center;
+}
+
+.result-box h2 {
+    color: green;
+}
+
+.result-box p {
+    font-size: 18px;
+}
+
+/* Mobile screen */
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .exam-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+}

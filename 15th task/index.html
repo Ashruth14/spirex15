@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Online Examination System</h1>
+
+        <!-- Exam information -->
+        <div class="exam-info">
+            <p>Student Name: <input type="text" id="studentName" placeholder="Enter your name"></p>
+            <p>Time Left: <span id="timer">05:00</span></p>
+        </div>
+
+        <!-- Question area -->
+        <div id="examBox">
+
+            <h2 id="questionNumber">Question 1</h2>
+
+            <p id="question">Question will appear here</p>
+
+            <div class="options">
+                <button class="option" onclick="selectAnswer(0)" id="option0"></button>
+                <button class="option" onclick="selectAnswer(1)" id="option1"></button>
+                <button class="option" onclick="selectAnswer(2)" id="option2"></button>
+                <button class="option" onclick="selectAnswer(3)" id="option3"></button>
+            </div>
+
+            <div class="buttons">
+                <button onclick="previousQuestion()">Previous</button>
+                <button onclick="nextQuestion()">Next</button>
+            </div>
+
+            <button class="submit-button" onclick="submitExam()">Submit Exam</button>
+
+        </div>
+
+        <!-- Result area -->
+        <div id="resultBox" class="result-box">
+
+            <h2>Exam Completed!</h2>
+
+            <p id="studentResult"></p>
+
+            <p id="score"></p>
+
+            <p id="percentage"></p>
+
+            <button onclick="restartExam()">Take Exam Again</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
